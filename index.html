@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最简单的弹幕</title>
+    <style>
+        .ul {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <ul class="ul">
+                <li>1</li>
+            </ul>
+        </div>
+        <input type="text" id="inp">
+        <button id="btn">发送</button>
+    </div>
+
+
+    <script>
+        function $(selector) {
+            return document.querySelector(selector);
+        }
+
+        var ul = $('.ul'),
+            inp = $('#inp'),
+            btn = $('#btn');
+
+        btn.onclick = function () {
+            if (inp.value === '') {
+                return;
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = inp.value;
+                ul.append(li);
+                inp.value = '';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
