@@ -3,63 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录验证</title>
-    <link rel="stylesheet" href="index.css">
+    <title>画板</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
-    <div class="login">
-        <div class="login-inner">
-            <img class="title-logo" src="image/logo2.png" alt="">
-            <div class="login-form">
-                <h2>
-                    <span>登录</span>
-                </h2>
-                <ul>
-                    <li>
-                        <input id="user" class="user" type="text" placeholder="请输入手机号码">
-                        <label class="laber-img" for="user">
-                            <img src="image/user.png" alt="">
-                        </label>
-                        <label class="laber-error" for="user">
-                            <div class="text-error">11位手机号码</div>
-                        </label>
-                    </li>
-                    <li>
-                        <input id="key" class="key" type="password"" placeholder="请输入密码">
-                        <label class="laber-img" for="key">
-                            <img src="image/key.png" alt="">
-                        </label>
-                        <label class="laber-error" for="key">
-                            <div class="text-error">首字母大写且不小于六位</div>
-                        </label>
-                    </li>
-                </ul>
-                <div class="error hide">输入错误，请检查手机号和密码格式</div>
-                <div class="login-tab1">
-                    <div class="login-tab1-item1">
-                        <button class="btn-login">登录</button>
-                        不是会员?
-                        <a href="#">去组册</a>
-                    </div>
-                    <div class="login-tab1-item2">
-                        <a href="#">忘记密码</a>
-                    </div>
-                </div>
-                <div class="login-tab2">
-                    <a href="#">
-                        <img src="image/weixin.png" alt="">
-                        微信登录
-                    </a>
-                    <a href="#">
-                        <img src="image/zhifubao.png" alt="">
-                        支付宝登录
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <canvas id="cans" width="700" height="330"></canvas>
+        <ul>
+            <li>
+                <input type="color" id="color-change">
+            </li>
+            <li>
+                <input type="button" value="清屏" id="clean-board">
+            </li>
+            <li>
+                <input type="button" value="橡皮" id="eraser">
+            </li>
+            <li>
+                <input type="button" value="撤销" id="rescind">
+            </li>
+            <li>
+                <input type="range" value="线条粗细" id="line-ruler" min="1" max="20">
+            </li>
+        </ul>
     </div>
-    
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
