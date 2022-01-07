@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>画板</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-    <div class="container">
-        <canvas id="cans" width="700" height="330"></canvas>
-        <ul>
-            <li>
-                <input type="color" id="color-change">
-            </li>
-            <li>
-                <input type="button" value="清屏" id="clean-board">
-            </li>
-            <li>
-                <input type="button" value="橡皮" id="eraser">
-            </li>
-            <li>
-                <input type="button" value="撤销" id="rescind">
-            </li>
-            <li>
-                <input type="range" value="线条粗细" id="line-ruler" min="1" max="20">
-            </li>
-        </ul>
-    </div>
-    <script src="js/index.js"></script>
+    <ul class="container">
+        <li>
+            <a href="#" class="leftBtn">
+                <span>我的订单</span>
+                <i></i>
+            </a>
+        </li>
+        <li class="pos">
+            <a href="#" class="leftBtn myEpay">
+                <span>我的易购</span>
+                <i id="i"></i>
+            </a>
+
+            <div class="down">
+                <div class="head">
+                    <img src="http://res.suning.cn/public/v3/images/tool-logo.png?v=2020081101" alt="">
+                    <div class="login">请登录</div>
+                </div>
+                <div class="content">
+                    <a href="#">我的消息</a>
+                    <a href="#">我的关注</a>
+                    <a href="#">我的金融</a>
+                    <a href="#">我的会员</a>
+                    <a href="#">我的任性付</a>
+                    <a href="#">我的优惠券</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="" class="leftBtn">
+                <span>苏宁会员</span>
+                <i></i>
+            </a>
+        </li>
+    </ul>
+
+    <script src="./js/index.js"></script>
 </body>
+
 </html>

@@ -1,41 +1,102 @@
-* {
+body {
   margin: 0;
   padding: 0;
+}
+li {
   list-style: none;
 }
-body {
-  background: url('../img/xhr.jpg') 0 0 no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+a {
+  text-decoration: none;
 }
-body .container {
-  margin: 30px;
+.container {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 35px;
+  border-bottom: 1px solid #eee;
 }
-body .container #cans {
-  border: 1px solid red;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  box-shadow: 10px 10px 5px #888;
+.container li {
+  float: left;
 }
-body .container ul {
-  width: 700px;
-  text-align: center;
+.container li a.leftBtn {
+  position: relative;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  color: #666;
+  font-size: 12px;
+  z-index: 999;
 }
-body .container ul li {
+.container li a.leftBtn:hover {
+  color: #f60;
+}
+.container i {
   display: inline-block;
-  margin-left: 35px;
+  width: 8px;
+  height: 8px;
+  background: url(../img/down.png) no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+  margin-left: 3px;
+  transition: all 0.3s;
 }
-body .container ul li input {
-  background: yellow;
-  color: black;
-  border: none;
-  padding: 6px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 25px;
-  transition-duration: 0.2s;
+.container .pos {
+  position: relative;
 }
-body .container ul li input:hover {
-  border: 1px solid rebeccapurple;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+.container .pos .down {
+  display: none;
+  position: absolute;
+  width: 204px;
+  left: 0;
+  top: 35px;
+  height: 180px;
+  border: 1px solid #ddd;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.container .pos .down .head {
+  width: 180px;
+  margin: 5px 10px;
+  height: 56px;
+  overflow: hidden;
+}
+.container .pos .down .head img {
+  float: left;
+  width: 54px;
+  height: 54px;
+}
+.container .pos .down .head .login {
+  float: left;
+  width: 86px;
+  height: 56px;
+  padding-left: 40px;
+  font-style: 12px;
+  margin-top: 14px;
+  color: #666;
+}
+.container .pos .down .content {
+  width: 100%;
+}
+.container .pos .down .content a {
+  float: left;
+  width: 91px;
+  height: 30px;
+  line-height: 30px;
+  font-style: 12px;
+  color: #666;
+  padding-left: 10px;
+}
+.container .pos .down .content a:hover {
+  color: #f60;
+}
+a.root {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0 9px;
+  line-height: 33px;
+  border-bottom: none;
+}
+.h {
+  height: 170px;
 }
